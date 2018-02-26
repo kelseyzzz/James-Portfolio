@@ -1,0 +1,177 @@
+/* 
+==============================================
+CONTENT:	James McAlister's Portfolio
+AUTHOR:		Kelsey Zahand
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+@import 'about';
+@import 'reset';
+
+@font-face {
+	    font-family: "Din";
+	    src: url("../font/din-medium.ttf");
+}
+
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: #1B526B;
+	font-family: 'Cabin', sans-serif;
+}
+
+
+.content {
+	position: relative;
+	background: rgba(255, 255, 255, 0.575);
+	padding: 50px 30px 50px;
+	font-family: sans-serif;
+	width: 90%;
+	max-width: 500px;
+	margin: 140px auto;
+}
+
+// .active {
+// 	left: 0;
+// 	right: auto;
+// 	width: 100%;
+// }
+
+.example {
+	display: inline;
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		width: 0;
+		bottom: -5px;
+		background: rgb(255, 255, 255);
+		height: 3px;
+		transition-property: width;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+	}
+
+	&:hover:after,
+	&:focus::after {
+		left: 0;
+		right: auto;
+		width: 100%;
+	}
+
+}
+
+
+
+
+/* 2. Content ================================= */
+
+.top-angle {
+	position: absolute;
+	left: -1%;
+	top: -15px;
+	width: 102%;
+	height: 30px;
+	background: #1B526B;
+	transform: rotate(-2.2deg);
+}
+
+.bottom-angle {
+	position: absolute;
+	left: -1%;
+	bottom: -15px;
+	width: 102%;
+	height: 30px;
+	background: #1B526B;
+	transform: rotate(1.5deg);
+}
+
+// .logo {
+// 	position: absolute;
+// 	top: -10px;
+// 	width: 60px;
+// }
+
+// h1 {
+// 	font-weight: 700;
+// 	font-size: 22pt;
+// 	margin: 15px 0;
+// }
+
+p {
+	color: #777;
+	// margin: 10px 0;
+	line-height: 140%;
+}
+
+
+
+// code {
+// 	position: absolute;
+// 	top: 20px;
+// 	right: 20px;
+// 	font-size: 0.8em;
+// 	opacity: 0.2;
+// }
+
+
+header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	color: white;
+	padding: 2rem;
+
+	.name-copy {
+		h1 {
+			font-size: 1.2rem;
+			margin-bottom: .5rem;
+		}
+		h2 {
+			font-size: .8rem;
+			display: flex;
+			justify-content: flex-end;
+			color: rgba(233, 233, 233, 0.747);
+			text-transform: uppercase;
+		}
+	}
+
+	nav ul{
+		display: flex;
+		
+		li {
+
+			
+
+			a {
+				margin: 1rem;
+				color: white;
+				text-decoration: none;
+					
+			}
+
+		
+		}
+	}
+	
+}
